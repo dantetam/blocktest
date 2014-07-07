@@ -42,9 +42,9 @@ public class Player {
 	{
 		if (w) 
 		{
-			posX += 75*(float)Math.cos(aRotY);
-			posY += 75*(float)Math.sin(aRotX);
-			posZ += 75*(float)Math.sin(aRotY);
+			posX += 25*(float)Math.cos(aRotY);
+			posY += 25*(float)Math.sin(aRotX);
+			posZ += 25*(float)Math.sin(aRotY);
 
 		}
 	}

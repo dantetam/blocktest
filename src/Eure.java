@@ -10,8 +10,8 @@ import java.util.ArrayList;
 public class Eure extends PApplet {
 
 	public Player e; //e for eure
-	public static int width = 1000;
-	public static int height = 400;
+	public static int width = 1200;
+	public static int height = 800;
 	public ArrayList<Entity> occupants = new ArrayList<Entity>();
 	
 	public Eure()
@@ -32,6 +32,7 @@ public class Eure extends PApplet {
 			}
 		});*/
 		//smooth(2);
+		showModel("someisland.txt",0,0,0);
 	}
 	
 	public void draw()
@@ -39,9 +40,8 @@ public class Eure extends PApplet {
 		//lights();
 		background(255);
 		camera(e.posX,e.posY,e.posZ,e.tarX,e.tarY,e.tarZ,0,-1,0);
-		//perspective((float)3.14/2, 2F, Math.signum(e.posZ)*e.posZ/100, Math.signum(e.posZ)*e.posZ*100);
-		perspective();
-		showModel("someisland.txt",0,0,0);
+		perspective((float)3.14/2, 2F, 1, 10000);
+		//perspective();
 		e.updateMouse(mouseX,mouseY);
 		e.handleInput(wPressed);
 		e.calcTarByAngle();
